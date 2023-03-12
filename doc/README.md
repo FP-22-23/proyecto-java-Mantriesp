@@ -44,10 +44,23 @@ El tipo base consiste en los diferentes atributos de los prestamos, anteriorment
 
 **Propiedades**:
 
-- _propiedad1_, de tipo \<Tipo1\>, consultable. 
-- _propiedad2_, de tipo \<Tipo2\>, consultable y modificable. 
-- ...
-- 
+Todas las propiedades de este tipo son consultables y modificables y son:
+
+- String prestamoId
+- Genero genero
+- Integer dependientes
+- Boolean graduado
+- Boolean autonomo
+- Float ingApl
+- Float ingCoapl
+- Integer cantidadPrestamos
+- Integer plazo
+- Boolean histCred
+- Area area
+- Boolean presAcept
+
+Sus funcionalidades estan explicads en el apartado "estructura del dataset".
+
 **Constructores**: 
 
 - C1: Constructor que posee todas las propiedades básicas
@@ -57,11 +70,10 @@ El tipo base consiste en los diferentes atributos de los prestamos, anteriorment
  
 - R1: Hace que la fecha de pedir el prestamo no pueda ser mayor a 2010
 - R2: Hacer que el ingreso del aplicante no pueda ser menor que 0
-- ...
-- 
-**Criterio de igualdad**: Describir el criterio de igualdad
 
-**Criterio de ordenación**: Describir el criterio de ordenación (si lo hay).
+**Criterio de igualdad**: El criterio de igualdad se determina por los atributos prestamoId y por fechaPres.
+
+**Criterio de ordenación**: El criterio de ordenacion se determina primero por la fecha del prestamo y despues por los dependientes del usuario.
 
 **Otras operaciones**:
  
