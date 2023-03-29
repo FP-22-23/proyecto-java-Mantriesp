@@ -21,6 +21,8 @@ public class Prestamo implements Comparable<Prestamo>{
 	private Area area;
 	private LocalDate fechaPres;
 	private Boolean presAcept;
+	
+	
 	//Constructor1
 	
     public Prestamo(String prestamoId, Genero genero, Integer dependientes, Boolean graduado,
@@ -51,7 +53,7 @@ public class Prestamo implements Comparable<Prestamo>{
     		this(prestamoId, genero, dependientes, graduado, autonomo, ingApl, ingCoapl, cantidadPrestamos,
     			plazo, histCred, area, null, presAcept);
     }
-    	//Restricciones
+    //Restricciones
     
     private void checkFechaPres(LocalDate fechaPres) {
         if (fechaPres.getYear() > 2010) {
@@ -149,8 +151,9 @@ public class Prestamo implements Comparable<Prestamo>{
 	public void setPresAcept(Boolean presAcept) {
 		this.presAcept = presAcept;
 	}
+	//Propiedad derivada
     public Float getIngresoTotal() {
-        return ingApl + ingCoapl;
+        return getIngApl() + getIngCoapl();
     }
 	@Override
 	public int hashCode() {

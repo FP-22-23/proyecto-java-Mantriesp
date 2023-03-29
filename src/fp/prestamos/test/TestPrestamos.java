@@ -24,7 +24,18 @@ public class TestPrestamos {
 		
 		//compareTo y equals para verificar funcionamiento
 		System.out.println(p.compareTo(p2));
-		System.out.println(p.equals(p2));	
+		System.out.println(p.equals(p2));
+		
+		//Metodo de la propiedad derivada
+		System.out.println(p.getIngresoTotal());
+		
+		//Comprobar los checkers
+			//Checker "Fecha no puede ser posterior a 2010"
+		p.setFechaPres(LocalDate.now());
+			//Checker "El ingreso aplicante no puede ser menor a 0"
+		p.setIngApl(-150.0f);
+		
+		
 
 
 }

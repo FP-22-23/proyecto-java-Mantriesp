@@ -1,5 +1,5 @@
 
-# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  \<XX\>/\<YY\>)
+# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  \<2022\>/\<2023\>)
 Autor: Manuel Triguero Espejo    uvus:mantriesp
 
 El proyecto trata sobre un csv de prestamos, que inicialmente estaba hecho para usarlo para predecir si un prestamo se iba a dar o no, pero le he hecho unas modificaciones para que sea apto para trabajar con el en el proyecto entregable, tales como añadirle una columna tipo LocalDate o transformar algunas columnas int a float.
