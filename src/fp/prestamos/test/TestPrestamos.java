@@ -6,6 +6,7 @@ import java.util.List;
 
 import fp.common.Area;
 import fp.common.Genero;
+import fp.common.Persona;
 import fp.prestamos.Prestamo;
 
 
@@ -13,10 +14,12 @@ public class TestPrestamos {
 	
 	public static void main(String[] args) {
 		//Creación Tipo Base con Constructor 1
-		Prestamo p = new Prestamo("ABC123", Genero.MALE, 2, true, false, 50000.0f, 10000.0f, 1, 12, true, Area.RURAL, LocalDate.of(1999, 3, 12), true);
+		Persona m = new Persona(Genero.MALE, "Manuel", "Triguero");
+		Prestamo p = new Prestamo("ABC123", m, 2, true, false, 50000.0f, 10000.0f, 1, 12, true, Area.RURAL, LocalDate.of(1999, 3, 12), true, "20000, 1200");
 		
 		//Creación Tipo Base con Constructor 2
-		Prestamo p2 = new Prestamo("ABC124", Genero.FEMALE, 2, false, true, 60000.0f, 12000.0f, 1, 12, true, Area.RURAL, LocalDate.of(1990, 4, 10), false);
+		Persona m2 = new Persona(Genero.MALE, "Juan", "Triguero");
+		Prestamo p2 = new Prestamo("ABC124", m2, 2, false, true, 60000.0f, 12000.0f, 1, 12, true, Area.RURAL, LocalDate.of(1990, 4, 10), false, "200000, 4000");
 		
 		//toString de los Viajes creados para comprobar que funcionan ambos
 		System.out.println(p);

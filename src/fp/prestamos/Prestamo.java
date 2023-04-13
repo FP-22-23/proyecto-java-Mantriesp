@@ -5,11 +5,12 @@ import java.util.Objects;
 
 import fp.common.Area;
 import fp.common.Genero;
+import fp.common.Persona;
 
 public class Prestamo implements Comparable<Prestamo>{
 	
 	private String prestamoId;
-	private Genero genero;
+	private Persona persona;
 	private Integer dependientes;
 	private Boolean graduado;
 	private Boolean autonomo;
@@ -21,17 +22,18 @@ public class Prestamo implements Comparable<Prestamo>{
 	private Area area;
 	private LocalDate fechaPres;
 	private Boolean presAcept;
+	private String listaActivos;
 	
 	
 	//Constructor1
 	
-    public Prestamo(String prestamoId, Genero genero, Integer dependientes, Boolean graduado,
+    public Prestamo(String prestamoId, Persona persona, Integer dependientes, Boolean graduado,
             Boolean autonomo, Float ingApl, Float ingCoapl, Integer cantidadPrestamos,
-            Integer plazo, Boolean histCred, Area area, LocalDate fechaPres, Boolean presAcept) {
+            Integer plazo, Boolean histCred, Area area, LocalDate fechaPres, Boolean presAcept, String listaActivos) {
     		checkFechaPres(fechaPres);
     		checkIngApl(ingApl);
     		this.prestamoId = prestamoId;
-    		this.genero = genero;
+    		this.persona = persona;
     		this.dependientes = dependientes;
     		this.graduado = graduado;
     		this.autonomo = autonomo;
@@ -43,15 +45,16 @@ public class Prestamo implements Comparable<Prestamo>{
     		this.area = area;
     		this.fechaPres = fechaPres;
     		this.presAcept = presAcept;
+    		this.listaActivos = listaActivos;
 
 }
 	//Constructor2
 	
-    public Prestamo(String prestamoId, Genero genero, Integer dependientes, Boolean graduado,
+    public Prestamo(String prestamoId, Persona persona, Integer dependientes, Boolean graduado,
             Boolean autonomo, Float ingApl, Float ingCoapl, Integer cantidadPrestamos,
-            Integer plazo, Boolean histCred, Area area, Boolean presAcept) {
-    		this(prestamoId, genero, dependientes, graduado, autonomo, ingApl, ingCoapl, cantidadPrestamos,
-    			plazo, histCred, area, null, presAcept);
+            Integer plazo, Boolean histCred, Area area, Boolean presAcept, String listaActivos) {
+    		this(prestamoId, persona, dependientes, graduado, autonomo, ingApl, ingCoapl, cantidadPrestamos,
+    			plazo, histCred, area, null, presAcept, null);
     }
     //Restricciones
     
@@ -75,11 +78,11 @@ public class Prestamo implements Comparable<Prestamo>{
 	public void setPrestamoId(String prestamoId) {
 		this.prestamoId = prestamoId;
 	}
-	public Genero getGenero() {
-		return genero;
+	public Persona getPersona() {
+		return persona;
 	}
-	public void setGenero(Genero genero) {
-		this.genero = genero;
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 	public Integer getDependientes() {
 		return dependientes;
@@ -141,6 +144,7 @@ public class Prestamo implements Comparable<Prestamo>{
 		checkFechaPres(fechaPres);
 		return fechaPres;
 	}
+	
 	public void setFechaPres(LocalDate fechaPres) {
 		checkFechaPres(fechaPres);
 		this.fechaPres = fechaPres;
@@ -151,6 +155,15 @@ public class Prestamo implements Comparable<Prestamo>{
 	public void setPresAcept(Boolean presAcept) {
 		this.presAcept = presAcept;
 	}
+	
+	public String getListaActivos() {
+		return listaActivos;
+	}
+
+	public void setListaActivos(String listaActivos) {
+		this.listaActivos = listaActivos;
+	}
+
 	//Propiedad derivada
     public Float getIngresoTotal() {
         return getIngApl() + getIngCoapl();
@@ -183,10 +196,10 @@ public class Prestamo implements Comparable<Prestamo>{
 	
 	@Override
 	public String toString() {
-		return "Prestamo [prestamoId=" + prestamoId + ", genero=" + genero + ", dependientes=" + dependientes
+		return "Prestamo [prestamoId=" + prestamoId + ", persona=" + persona + ", dependientes=" + dependientes
 				+ ", graduado=" + graduado + ", autonomo=" + autonomo + ", ingApl=" + ingApl + ", ingCoapl=" + ingCoapl
 				+ ", cantidadPrestamos=" + cantidadPrestamos + ", plazo=" + plazo + ", histCred=" + histCred + ", area="
-				+ area + ", fechaPres=" + fechaPres + ", presAcept=" + presAcept + "]";
+				+ area + ", fechaPres=" + fechaPres + ", presAcept=" + presAcept + ", listaActivos=" + listaActivos + "]";
 	}
 
 	
