@@ -12,7 +12,7 @@ El proyecto trata sobre un csv de prestamos, que inicialmente estaba hecho para 
   * **fp.common**: Paquete que contiene los tipos auxiliares del proyecto
   * **fp.utiles**:  Paquete que contiene las clases de utilidad. 
 * **/data**: Contiene el dataset o datasets del proyecto
-    * **\<dataset1.csv\>**: Es un dataset que va sobre prestamos.
+* **\<prestamos.csv\>**: Es un dataset que va sobre prestamos.
     
     
 ## Estructura del *dataset*
@@ -21,19 +21,20 @@ URL: https://www.kaggle.com/datasets/shaijudatascience/loan-prediction-practice-
 
 El dataset está compuesto por \<13\> columnas, con la siguiente descripción:
 
-* **\<columna 1>**: de tipo String, representa un identificador único de cada fila
-* **\<columna 2>**: de tipo Genero, representa el genero de la persona que pide el prestamo ( MALE o FEMALE)
-* **\<columna 3>**: de tipo Integer, representa las personas las cuales tienen dependencia de la persona que pide el prestamo (hijos, etc...)
-* **\<columna 4>**: de tipo Boolean, representa si se ha graduado de los estudios basicos o no
-* **\<columna 5>**: de tipo Boolean, representa si la persona es autonoma o no
-* **\<columna 6>**: de tipo Float, representa el ingreso de la persona que pide el prestamo
-* **\<columna 7>**: de tipo Float, representa el ingreso de un coaplicante al prestamo
-* **\<columna 8>**: de tipo Integer, representa la cantidad del prestamo en miles de dolares
-* **\<columna 9>**: de tipo Integer, representa el plazo que tienen para devolver el prestamo en meses
-* **\<columna 10>**: de tipo Boolean, representa si el usuario ha cumplido con el historial crediticeo o no
-* **\<columna 11>**: de tipo Area, representa el area en el que reside el aplicante (URBAN, RURAL, SEMIURBAN)
-* **\<columna 12>**: de tipo LocalDate, representa el dia el mes y el año en el que fue pedido el prestamo
-* **\<columna 13>**: de tipo Boolean, representa si se concedio el prestamo o no
+* **\<prestamoId>**: de tipo String, representa un identificador único de cada fila
+* **\<persona>**: de tipo Persona, propiedad auxiliar que proporciona el genero de una persona (MALE o FEMALE) aparte de su nombre y apellidos
+* **\<dependientes>**: de tipo Integer, representa las personas las cuales tienen dependencia de la persona que pide el prestamo (hijos, etc...)
+* **\<graduado>**: de tipo Boolean, representa si se ha graduado de los estudios basicos o no
+* **\<autonomo>**: de tipo Boolean, representa si la persona es autonoma o no
+* **\<ingApl>**: de tipo Float, representa el ingreso de la persona que pide el prestamo
+* **\<ingCoapl>**: de tipo Float, representa el ingreso de un coaplicante al prestamo
+* **\<cantidadPrestamos>**: de tipo Integer, representa la cantidad del prestamo en miles de dolares
+* **\<plazo>**: de tipo Integer, representa el plazo que tienen para devolver el prestamo en meses
+* **\<histCred>**: de tipo Boolean, representa si el usuario ha cumplido con el historial crediticeo o no
+* **\<area>**: de tipo Area, representa el area en el que reside el aplicante (URBAN, RURAL, SEMIURBAN)
+* **\<fechaPres>**: de tipo LocalDate, representa el dia el mes y el año en el que fue pedido el prestamo
+* **\<listaActivos>**: de tipo List<Integer>, representa los activos del aplicante en este orden: vivienda, coche, segunda vivienda. Si no cuenta con alguno de estos, se señaliza con un 0
+
 
 ## Tipos implementados
 
@@ -47,7 +48,7 @@ El tipo base consiste en los diferentes atributos de los prestamos, anteriorment
 Todas las propiedades de este tipo son consultables y modificables y son:
 
 - String prestamoId
-- Genero genero
+- Persona persona
 - Integer dependientes
 - Boolean graduado
 - Boolean autonomo
@@ -57,19 +58,19 @@ Todas las propiedades de este tipo son consultables y modificables y son:
 - Integer plazo
 - Boolean histCred
 - Area area
-- Boolean presAcept
+- LocalDate fechaPres
+- List<Integer> listaActivos
 
 Sus funcionalidades estan explicads en el apartado "estructura del dataset".
 
 **Constructores**: 
 
-- C1: Constructor que posee todas las propiedades básicas
+- C1: Constructor con todas las propiedades básicas
 - C2: Constructor que posee todas las propiedades basicas pero  se omiten la fecha de préstamo y el atributo presAcept.
 
 **Restricciones**:
  
-- R1: Hace que la fecha de pedir el prestamo no pueda ser mayor a 2010
-- R2: Hacer que el ingreso del aplicante no pueda ser menor que 0
+- R1: Hacer que el ingreso del aplicante no pueda ser menor que 0
 
 **Criterio de igualdad**: El criterio de igualdad se determina por los atributos prestamoId y por fechaPres.
 
@@ -81,4 +82,55 @@ Sus funcionalidades estan explicads en el apartado "estructura del dataset".
 
 
 #### Tipos auxiliares
-Por ahora los tipos auxiliares que he tenido que añadir al proyecto han sido 2 tipo enum, para poder definir los atributos area y genero
+
+**Enums:**
+
+- Area: Es un enumerado añadido para el atributo area, está formado por URBAN, RURAL, SEMIURBAN.
+
+**Clases auxiliares:**
+
+- Persona: Es una clase auxiliar que cuenta con tres atributos(genero, nombre, apellido). Además cuenta con un constructor con todas las propiedades básicas de la clase y sus correspondientes getters y toString.
+
+## Factoría - Prestamos
+
+Clase factoria para construir objetos tipo prestamos
+
+- Prestamos leerPrestamos(String ruta): Crea un objeto de tipo Prestamos a partir de la información recogida en el archivo csv, cuya ruta se da como parámetro.
+
+- Prestamo parsearPrestamo(String linea): Parsea el archivo csv para que pueda ser legible por la funcion leerPrestamos
+
+## Tipo Contenedor - Prestamos
+
+Clase contenedora de los objetos tipo prestamo
+
+**Propiedades**:
+
+prestamos, de tipo Set<Prestamo>, consultable y modificable. Lista de prestamos
+
+**Constructores**: 
+
+C1: Constructor por defecto. Crea un objeto de tipo Prestamos sin ninguna partida almacenada.
+
+C2: Constructor que crea un objeto de tipo contenedor con todos los elementos de la colección.
+
+**Criterio de igualdad**:
+
+Dos prestamos son iguales si lo son sus propiedades prestamos.
+
+**Otras Operaciones**:
+
+Cuenta con las operaciones get (Para obtener el valor del objeto en ese momento), set (Para cambiar el valor del objeto en ese momento), add (Para añadir un objeto al Set) y remove (Para quitar un objeto del Set.
+
+Aparte de estas operaciones básicas, cuenta con otras más avanzadas de tratamientos secuenciales, tales como:
+
+-  public boolean existePrestamoParaTodoGraduado(Boolean graduado): Te dice si existe algún prestamo para alguien que este graduado o no, eso lo eliges pasandole el parametro true o false.
+
+- public int contarPrestamosConPlazoMayorOIgualQue(int plazo): Cuenta los prestamos que hay con plazo mayor al int que le pases como parametro.
+
+- public double calcularMediaCantidadPrestamosParaAutonomos(Boolean autonomo): Calcula una media de la cantidad de prestamos que hay para los autonomos o los no autonomos, esto ultimo depende del boolean que le pases como parametro.
+
+- public List<Prestamo> seleccionarPrestamosConIngresosSuperioresA(float ingresos): Selecciona y muestra una lista de los prestamos que tienen un ingreso del aplicante mayor al int que le pases como parametro.
+
+- public Map<Area, Set<Prestamo>> agruparPrestamosPorArea(): Crea un map que ordena los prestamos que existen dependiendo del parametro area, que es un enum y cuenta con los valores: RURAL, URBAN, SEMIURBAN.
+
+	

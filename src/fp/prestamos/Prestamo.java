@@ -1,10 +1,10 @@
 package fp.prestamos;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
-
 import fp.common.Area;
-import fp.common.Genero;
 import fp.common.Persona;
 
 public class Prestamo implements Comparable<Prestamo>{
@@ -21,16 +21,14 @@ public class Prestamo implements Comparable<Prestamo>{
 	private Boolean histCred;
 	private Area area;
 	private LocalDate fechaPres;
-	private Boolean presAcept;
-	private String listaActivos;
+	private List<Integer> listaActivos;
 	
 	
 	//Constructor1
 	
     public Prestamo(String prestamoId, Persona persona, Integer dependientes, Boolean graduado,
             Boolean autonomo, Float ingApl, Float ingCoapl, Integer cantidadPrestamos,
-            Integer plazo, Boolean histCred, Area area, LocalDate fechaPres, Boolean presAcept, String listaActivos) {
-    		checkFechaPres(fechaPres);
+            Integer plazo, Boolean histCred, Area area, LocalDate fechaPres, List<Integer> listaActivos) {
     		checkIngApl(ingApl);
     		this.prestamoId = prestamoId;
     		this.persona = persona;
@@ -44,7 +42,6 @@ public class Prestamo implements Comparable<Prestamo>{
     		this.histCred = histCred;
     		this.area = area;
     		this.fechaPres = fechaPres;
-    		this.presAcept = presAcept;
     		this.listaActivos = listaActivos;
 
 }
@@ -52,17 +49,11 @@ public class Prestamo implements Comparable<Prestamo>{
 	
     public Prestamo(String prestamoId, Persona persona, Integer dependientes, Boolean graduado,
             Boolean autonomo, Float ingApl, Float ingCoapl, Integer cantidadPrestamos,
-            Integer plazo, Boolean histCred, Area area, Boolean presAcept, String listaActivos) {
+            Integer plazo, Boolean histCred, Area area, List<Integer> listaActivos) {
     		this(prestamoId, persona, dependientes, graduado, autonomo, ingApl, ingCoapl, cantidadPrestamos,
-    			plazo, histCred, area, null, presAcept, null);
+    			plazo, histCred, area, null, null);
     }
     //Restricciones
-    
-    private void checkFechaPres(LocalDate fechaPres) {
-        if (fechaPres.getYear() > 2010) {
-            throw new IllegalArgumentException("La fecha de préstamo no puede ser posterior a 2010.");
-        }
-    }
     
     public void checkIngApl(Float ingApl) {
         if (ingApl < 0) {
@@ -141,26 +132,18 @@ public class Prestamo implements Comparable<Prestamo>{
 		this.area = area;
 	}
 	public LocalDate getFechaPres() {
-		checkFechaPres(fechaPres);
 		return fechaPres;
 	}
 	
 	public void setFechaPres(LocalDate fechaPres) {
-		checkFechaPres(fechaPres);
 		this.fechaPres = fechaPres;
 	}
-	public Boolean getPresAcept() {
-		return presAcept;
-	}
-	public void setPresAcept(Boolean presAcept) {
-		this.presAcept = presAcept;
-	}
 	
-	public String getListaActivos() {
+	public List<Integer> getListaActivos() {
 		return listaActivos;
 	}
 
-	public void setListaActivos(String listaActivos) {
+	public void setListaActivos(List<Integer> listaActivos) {
 		this.listaActivos = listaActivos;
 	}
 
@@ -199,7 +182,7 @@ public class Prestamo implements Comparable<Prestamo>{
 		return "Prestamo [prestamoId=" + prestamoId + ", persona=" + persona + ", dependientes=" + dependientes
 				+ ", graduado=" + graduado + ", autonomo=" + autonomo + ", ingApl=" + ingApl + ", ingCoapl=" + ingCoapl
 				+ ", cantidadPrestamos=" + cantidadPrestamos + ", plazo=" + plazo + ", histCred=" + histCred + ", area="
-				+ area + ", fechaPres=" + fechaPres + ", presAcept=" + presAcept + ", listaActivos=" + listaActivos + "]";
+				+ area + ", fechaPres=" + fechaPres  + ", listaActivos=" + listaActivos + "]";
 	}
 
 	

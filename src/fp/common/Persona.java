@@ -2,17 +2,17 @@ package fp.common;
 
 public class Persona {
 	
-	private Genero genero;
+	private String genero;
 	private String nombre;
 	private String apellido;
 	
-	public Persona(Genero genero, String nombre, String apellido) {
+	public Persona(String genero, String nombre, String apellido) {
 		this.genero = genero;
 		this.nombre = nombre;
 		this.apellido = apellido;
 	}
 
-	public Genero getGenero() {
+	public String getGenero() {
 		return genero;
 	}
 
