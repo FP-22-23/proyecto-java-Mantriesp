@@ -47,6 +47,10 @@ public class Prestamos {
         this.prestamos.remove(prestamo);
     }
     
+    public int obtenerCantidadPrestamos() {
+        return prestamos.size();
+    }    
+    
     // Tratamientos secuenciales
     public boolean existePrestamoParaTodoGraduado(Boolean graduado) {
         for (Prestamo p : prestamos) {

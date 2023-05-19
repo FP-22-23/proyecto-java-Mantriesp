@@ -20,30 +20,30 @@ public class FactoriaPrestamos {
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yy");
     
     public static Prestamos leerPrestamos(String ruta) {
-    	Prestamos res = new Prestamos();
-    	try  {
-    		List<String> lineas = Files.readAllLines(Paths.get(ruta));
-    		for (String linea: lineas.subList(1, lineas.size())) {
-    			res.añadirPrestamo(parsearPrestamo(linea));
-    		}
-    	} catch(Exception e) {
-    		e.printStackTrace();
-    	}
-    	return res;
+        Prestamos res = new Prestamos();
+        try  {
+            List<String> lineas = Files.readAllLines(Paths.get(ruta));
+            for (String linea: lineas.subList(1, lineas.size())) {
+                res.añadirPrestamo(parsearPrestamo(linea));
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        return res;
     }
     
     public static Prestamo parsearPrestamo(String linea) {
         String[] campos = linea.split(";");
-        
+
         String prestamoId = campos[0].trim();
         Persona persona = new Persona(campos[1].trim(), campos[2].trim(), campos[3].trim());
         Integer dependientes = Integer.parseInt(campos[4].trim());
-        Boolean graduado = campos[5].trim()=="Graduate";
+        Boolean graduado = campos[5].trim().equals("Graduate");
         Boolean autonomo = parseaAutonomo(campos[6].trim());
-        Float ingApl = Float.parseFloat(campos[7].trim());
-        Float ingCoapl = Float.parseFloat(campos[8].trim());
-        Integer cantidadPrestamos = Integer.parseInt(campos[9].trim());
-        Integer plazo = Integer.parseInt(campos[10].trim());
+        Float ingApl = parseFloatWithDefault(campos[7].trim(), 0.0f);
+        Float ingCoapl = parseFloatWithDefault(campos[8].trim(), 0.0f);
+        Integer cantidadPrestamos = parseIntWithDefault(campos[9].trim(), 0);
+        Integer plazo = parseIntWithDefault(campos[10].trim(), 0);
         Boolean histCred = Boolean.parseBoolean(campos[11].trim());
         Area area = Area.valueOf(campos[12].toUpperCase().trim());
         LocalDate fechaPres = LocalDate.parse(campos[13].trim(), DATE_FORMATTER);
@@ -54,18 +54,35 @@ public class FactoriaPrestamos {
                 listaActivos.add(Integer.parseInt(activo.trim()));
             }
         }
-        
+
         return new Prestamo(prestamoId, persona, dependientes, graduado, autonomo, ingApl, ingCoapl, cantidadPrestamos, plazo, histCred, area, fechaPres, listaActivos);
     }
     
-	private static Boolean parseaAutonomo(String cadena) {
-		Boolean res = null;
-		cadena = cadena.toUpperCase();
-		if (cadena.equals("YES")) {
-			res = true;
-		}else {
-			res = false;
-		}
-		return res;
-	}
+    private static Boolean parseaAutonomo(String cadena) {
+        Boolean res = null;
+        cadena = cadena.toUpperCase();
+        if (cadena.equals("YES")) {
+            res = true;
+        } else {
+            res = false;
+        }
+        return res;
+    }
+    
+    private static Float parseFloatWithDefault(String cadena, Float defaultValue) {
+        try {
+            return Float.parseFloat(cadena);
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
+    }
+    
+    private static Integer parseIntWithDefault(String cadena, Integer defaultValue) {
+        try {
+            return Integer.parseInt(cadena);
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
+    }
 }
+

@@ -16,10 +16,11 @@ public class TestFactoriaPrestamos {
         System.out.println("\nTest de la creacion de prestamos");
         try {
             Prestamos prestamos = FactoriaPrestamos.leerPrestamos("data/prestamos.csv");
+            int cantidadPrestamos = prestamos.obtenerCantidadPrestamos();
             System.out.println("  Prestamos: " + prestamos);
+            System.out.println("Numero de prestamos: " + cantidadPrestamos);
         } catch(Exception e) {
             System.out.println("Excepcion capturada: " + e);
         }
     }
 }
-
