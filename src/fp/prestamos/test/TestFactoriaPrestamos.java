@@ -17,8 +17,11 @@ public class TestFactoriaPrestamos {
         try {
             Prestamos prestamos = FactoriaPrestamos.leerPrestamos("data/prestamos.csv");
             int cantidadPrestamos = prestamos.obtenerCantidadPrestamos();
+            FactoriaPrestamos factoria = new FactoriaPrestamos();
+            Prestamos prestamos2 = factoria.crearPrestamosDesdeCSV("data/prestamos.csv");
             System.out.println("  Prestamos: " + prestamos);
             System.out.println("Numero de prestamos: " + cantidadPrestamos);
+            System.out.println("Conversion de prestamos: " + prestamos2);
         } catch(Exception e) {
             System.out.println("Excepcion capturada: " + e);
         }

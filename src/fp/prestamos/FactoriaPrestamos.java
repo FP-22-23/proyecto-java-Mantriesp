@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import fp.common.Area;
 import fp.common.Persona;
@@ -40,10 +41,10 @@ public class FactoriaPrestamos {
         Integer dependientes = Integer.parseInt(campos[4].trim());
         Boolean graduado = campos[5].trim().equals("Graduate");
         Boolean autonomo = parseaAutonomo(campos[6].trim());
-        Float ingApl = parseFloatWithDefault(campos[7].trim(), 0.0f);
-        Float ingCoapl = parseFloatWithDefault(campos[8].trim(), 0.0f);
-        Integer cantidadPrestamos = parseIntWithDefault(campos[9].trim(), 0);
-        Integer plazo = parseIntWithDefault(campos[10].trim(), 0);
+        Float ingApl = Float.parseFloat(campos[7].trim());
+        Float ingCoapl = Float.parseFloat(campos[8].trim());
+        Integer cantidadPrestamos = Integer.parseInt(campos[9].trim());
+        Integer plazo = Integer.parseInt(campos[10].trim());
         Boolean histCred = Boolean.parseBoolean(campos[11].trim());
         Area area = Area.valueOf(campos[12].toUpperCase().trim());
         LocalDate fechaPres = LocalDate.parse(campos[13].trim(), DATE_FORMATTER);
@@ -58,6 +59,18 @@ public class FactoriaPrestamos {
         return new Prestamo(prestamoId, persona, dependientes, graduado, autonomo, ingApl, ingCoapl, cantidadPrestamos, plazo, histCred, area, fechaPres, listaActivos);
     }
     
+    public Prestamos crearPrestamosDesdeCSV(String rutaArchivoCSV) {
+        try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivoCSV))) {
+            Stream<Prestamo> prestamoStream = br.lines()
+                    .skip(1) // Saltar la primera línea (encabezados)
+                    .map(FactoriaPrestamos::parsearPrestamo);
+            return new Prestamos(prestamoStream);
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo CSV: " + e.getMessage());
+            return new Prestamos();
+        }
+    }
+    
     private static Boolean parseaAutonomo(String cadena) {
         Boolean res = null;
         cadena = cadena.toUpperCase();
@@ -69,20 +82,5 @@ public class FactoriaPrestamos {
         return res;
     }
     
-    private static Float parseFloatWithDefault(String cadena, Float defaultValue) {
-        try {
-            return Float.parseFloat(cadena);
-        } catch (NumberFormatException e) {
-            return defaultValue;
-        }
-    }
-    
-    private static Integer parseIntWithDefault(String cadena, Integer defaultValue) {
-        try {
-            return Integer.parseInt(cadena);
-        } catch (NumberFormatException e) {
-            return defaultValue;
-        }
-    }
 }
 

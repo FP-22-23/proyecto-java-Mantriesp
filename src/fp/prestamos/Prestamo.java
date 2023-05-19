@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import fp.common.Area;
 import fp.common.Persona;
+import fp.utiles.Checkers;
 
 public class Prestamo implements Comparable<Prestamo>{
 	
@@ -30,6 +31,9 @@ public class Prestamo implements Comparable<Prestamo>{
             Boolean autonomo, Float ingApl, Float ingCoapl, Integer cantidadPrestamos,
             Integer plazo, Boolean histCred, Area area, LocalDate fechaPres, List<Integer> listaActivos) {
     		checkIngApl(ingApl);
+    		checkPlazo(plazo);
+    		checkDependientes(dependientes);
+    		checkIngresoCoaplicante(ingCoapl);
     		this.prestamoId = prestamoId;
     		this.persona = persona;
     		this.dependientes = dependientes;
@@ -49,18 +53,42 @@ public class Prestamo implements Comparable<Prestamo>{
 	
     public Prestamo(String prestamoId, Persona persona, Integer dependientes, Boolean graduado,
             Boolean autonomo, Float ingApl, Float ingCoapl, Integer cantidadPrestamos,
-            Integer plazo, Boolean histCred, Area area, List<Integer> listaActivos) {
-    		this(prestamoId, persona, dependientes, graduado, autonomo, ingApl, ingCoapl, cantidadPrestamos,
-    			plazo, histCred, area, null, null);
+            Integer plazo, Boolean histCred, Area area) {
+    		checkIngApl(ingApl);
+    		checkIngresoCoaplicante(ingCoapl);
+    		checkPlazo(plazo);
+    		checkDependientes(dependientes);
+    		this.prestamoId = prestamoId;
+    		this.persona = persona;
+    		this.dependientes = dependientes;
+    		this.graduado = graduado;
+    		this.autonomo = autonomo;
+    		this.ingApl = ingApl;
+    		this.ingCoapl = ingCoapl;
+    		this.cantidadPrestamos = cantidadPrestamos;
+    		this.plazo = plazo;
+    		this.histCred = histCred;
+    		this.area = area;
+    		fechaPres = null;
+    		listaActivos = null;
     }
     //Restricciones
     
     public void checkIngApl(Float ingApl) {
-        if (ingApl < 0) {
-            throw new IllegalArgumentException("El ingreso aplicante no puede ser menor que 0.");
-        }
-      }
-
+    	Checkers.check("El ingreso del aplicante no puede ser menor que 0", ingApl >= 0);
+    }
+    
+    public void checkPlazo(Integer plazo) {
+    	Checkers.check("El plazo no puede ser menos de 0 meses", plazo >= 0);
+    }
+    
+    public void checkDependientes(Integer dependientes) {
+    	Checkers.check("No se pueden tener menos de 0 personas dependientes", dependientes >= 0);
+    }
+    
+    public void checkIngresoCoaplicante(Float ingCoapl) {
+    	Checkers.check("El ingreso del coaplicante no puede ser menor que 0", ingCoapl >= 0);
+    }
 	
 	//Getters y Setters
 	public String getPrestamoId() {
@@ -79,6 +107,7 @@ public class Prestamo implements Comparable<Prestamo>{
 		return dependientes;
 	}
 	public void setDependientes(Integer dependientes) {
+		checkDependientes(dependientes);
 		this.dependientes = dependientes;
 	}
 	public Boolean getGraduado() {
@@ -94,7 +123,6 @@ public class Prestamo implements Comparable<Prestamo>{
 		this.autonomo = autonomo;
 	}
 	public Float getIngApl() {
-		checkIngApl(ingApl);
 		return ingApl;
 	}
 	public void setIngApl(Float ingApl) {
@@ -105,6 +133,7 @@ public class Prestamo implements Comparable<Prestamo>{
 		return ingCoapl;
 	}
 	public void setIngCoapl(Float ingCoapl) {
+		checkIngresoCoaplicante(ingCoapl);
 		this.ingCoapl = ingCoapl;
 	}
 	public Integer getCantidadPrestamos() {
@@ -117,6 +146,7 @@ public class Prestamo implements Comparable<Prestamo>{
 		return plazo;
 	}
 	public void setPlazo(Integer plazo) {
+		checkPlazo(plazo);
 		this.plazo = plazo;
 	}
 	public Boolean getHistCred() {

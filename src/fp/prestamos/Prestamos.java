@@ -1,12 +1,18 @@
 package fp.prestamos;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,6 +34,12 @@ public class Prestamos {
 	public Prestamos(Set<Prestamo> prestamos) {
 		this.prestamos = prestamos;
 	}
+	
+	//C3 (A partir de Stream)
+	
+    public Prestamos(Stream<Prestamo> prestamoStream) {
+        this.prestamos = prestamoStream.collect(Collectors.toSet());
+    }
 	
 	//Operaciones get, set, add y remove:
 	
@@ -104,16 +116,85 @@ public class Prestamos {
         return mapa;
     }
 
-    public Map<Boolean, Integer> acumularPrestamosPorGenero(String genero) {
+    public Map<Boolean, Integer> acumularPrestamosPorGenero(Area area) {
         Map<Boolean, Integer> mapa = new HashMap<>();
         for (Prestamo p : prestamos) {
-            if (p.getPersona().getGenero().equals(genero)) {
+            if (p.getArea().equals(area)) {
                 boolean aut = p.getAutonomo();
                 mapa.put(aut, mapa.getOrDefault(aut, 0) + 1);
             }
         }
         return mapa;
     }
+    
+    //Tratamientos Secuenciales con Streams
+    
+    	//BLOQUE 1
+    
+    public boolean streamExistePrestamoParaTodoGraduado(Boolean graduado) {
+    	return prestamos.stream()
+    			.anyMatch(p->p.getGraduado().equals(graduado));
+    }
+    
+    public int streamContarPrestamosConPlazoMayorOIgualQue(int plazo) {
+    	Long res = prestamos.stream().filter(p->p.getPlazo() >= plazo).count();
+    	return res.intValue();
+    }
+    
+    public List<Prestamo> streamSeleccionarPrestamosConIngresosSuperioresA(float ingresos) {
+    	return prestamos.stream().filter(p -> p.getIngresoTotal() > ingresos)
+    			.collect(Collectors.toList());
+    }
+    
+    public Prestamo streamMaximoIngresoTotalPorArea(Area area) {
+    	return prestamos.stream().filter(p -> p.getArea().equals(area))
+    			.max(Comparator.comparing(Prestamo::getIngresoTotal)).get();	
+    }
+    
+    public List<Prestamo> streamSeleccionarPrestamosOrdenadosFecha(LocalDate fecha) {
+    	return prestamos.stream().filter(p -> p.getFechaPres().isAfter(fecha))
+    			.sorted(Comparator.comparingInt(Prestamo::getPlazo))
+    			.collect(Collectors.toList());
+    }
+    
+    	//BLOQUE 2
+    
+    public Map<Integer, Long> agruparPrestamosPorDependientes() {
+        return prestamos.stream()
+                .collect(Collectors.groupingBy(Prestamo::getDependientes, Collectors.counting()));
+    }
+    
+    public Map<Integer, Integer> agruparPrestamosPorPlazo() {
+        return prestamos.stream()
+                .collect(Collectors.groupingBy(Prestamo::getPlazo,
+                        Collectors.collectingAndThen(Collectors.counting(), Long::intValue)));
+    }
+    
+    public Map<Area, Prestamo> obtenerMaximosElementosPorArea() {
+        Map<Area, Prestamo> res = prestamos.stream()
+                .collect(Collectors.groupingBy(Prestamo::getArea,
+                        Collectors.collectingAndThen(
+                                Collectors.maxBy(Comparator.comparing(Prestamo::getArea)),
+                                optPrestamo -> optPrestamo.orElse(null))));
+
+        return res;
+    }
+
+    public SortedMap<Integer, List<Prestamo>> obtenerNMejoresElementosPorDependientes(int n) {
+        Comparator<Prestamo> comparador = Comparator.comparing(Prestamo::getIngresoTotal);
+
+        Map<Integer, List<Prestamo>> agrupados = prestamos.stream()
+                .collect(Collectors.groupingBy(Prestamo::getDependientes));
+
+        SortedMap<Integer, List<Prestamo>> sortedMap = new TreeMap<>(agrupados);
+        sortedMap.replaceAll((clave, lista) -> lista.stream()
+                .sorted(comparador) // Utilizar "comparador" o "comparador.reversed()" según se deseen los mejores o peores elementos
+                .limit(n)
+                .collect(Collectors.toList()));
+
+        return sortedMap;
+    }
+    
     
 	// HashCode:
 
