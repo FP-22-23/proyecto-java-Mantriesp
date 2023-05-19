@@ -188,13 +188,26 @@ public class Prestamos {
 
         SortedMap<Integer, List<Prestamo>> sortedMap = new TreeMap<>(agrupados);
         sortedMap.replaceAll((clave, lista) -> lista.stream()
-                .sorted(comparador) // Utilizar "comparador" o "comparador.reversed()" según se deseen los mejores o peores elementos
+                .sorted(comparador)
                 .limit(n)
                 .collect(Collectors.toList()));
 
         return sortedMap;
     }
     
+    public Map<Integer, Float> obtenerClaveMayorIngreso() {
+        Optional<Prestamo> prestamoOptional = prestamos.stream()
+                .max(Comparator.comparing(Prestamo::getIngresoTotal));
+        
+        if (prestamoOptional.isPresent()) {
+            Prestamo prestamo = prestamoOptional.get();
+            Map<Integer, Float> resultado = new HashMap<>();
+            resultado.put(prestamo.getFechaPres().getYear(), prestamo.getIngresoTotal());
+            return resultado;
+        } else {
+            throw new IllegalStateException("La lista de préstamos está vacía");
+        }
+    }
     
 	// HashCode:
 

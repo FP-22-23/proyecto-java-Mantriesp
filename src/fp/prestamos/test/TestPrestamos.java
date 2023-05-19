@@ -30,6 +30,7 @@ public class TestPrestamos {
 		testAgruparPrestamosPorPlazo(prestamos);
 		testObtenerMaximosElementosPorArea(prestamos);
 		testObtenerNMejoresElementosPorIngresoTotal(prestamos, 3);
+		testObtenerClaveMayorIngreso(prestamos);
 	}
 		
 	private static void testExisteParaTodoGraduado(Prestamos prestamos, Boolean graduado) {
@@ -167,10 +168,10 @@ public class TestPrestamos {
 		}
 	}
 	
-	private static void test(Prestamos prestamos) {
+	private static void testObtenerClaveMayorIngreso(Prestamos prestamos) {
 		System.out.println("\n Test método 5 BLOQUE II: ");
 		try {
-			System.out.println();
+			System.out.println("El mayor ingreso total de los prestamos con su respetivo año: " + prestamos.obtenerClaveMayorIngreso());
 		} catch(Exception e) {
 			System.out.println("Excepcion capturada: " + e);
 		}

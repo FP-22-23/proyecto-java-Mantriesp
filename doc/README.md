@@ -173,5 +173,7 @@ Aparte de estas operaciones básicas, cuenta con otras más avanzadas de tratami
  - **public Map<Area, Prestamo> obtenerMaximosElementosPorArea()**: Devuelve un mapa en el que as claves son las distintas areas y la clave es el tipo Prestamo con más ingresos de esa area.
  
  - **public SortedMap<Integer, List<Prestamo>> obtenerNMejoresElementosPorDependientes(int n)**: Devuelve un mapa en el que las claves son las personas dependientes y los valores, los n objetos tipo prestamo con mas ingresos totales.
+ 
+ - **public Map<Integer, Float> obtenerClaveMayorIngreso()**: Devuelve un mapa en el que el valor es el máximo ingreso y la clave es el respectivo año en el que se pidió el susodicho préstamo.
 
 	
