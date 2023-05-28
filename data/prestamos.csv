@@ -1,0 +1,201 @@
+Prestamo_ID;Persona;Dependientes;Graduado;Autonomo;IngresosAplicante;IngresosCoaplicante;CantidadPrestamos;Plazo;HistorialCrediticio;AreaPropietario;FechaPeticionPrestamo;ListaActivos
+LP001002;"Male;Trstram;Annis";0;Graduate;No;5849;0;120;360;1;Urban;19-04-90;479370, 7530, 0
+LP001091;"Male;Roscoe;Persian";1;Graduate;Yes;4166;3369;201;360;0;Urban;19-12-96;388177, 0, 0
+LP001095;"Male;Maddie;Golley";0;Graduate;No;3167;0;74;360;1;Urban;05-04-94;187585, 0, 0
+LP001097;"Male;Arly;Leinweber";1;Graduate;Yes;4692;0;106;360;1;Rural;01-04-06;98111, 14016, 0
+LP001098;"Male;Jobey;Farrent";0;Graduate;No;3500;1667;114;360;1;Semiurban;02-02-93;352769, 5755, 0
+LP001100;"Male;Jocelin;Benwell";3;Graduate;No;12500;3000;320;360;1;Rural;15-03-97;132333, 2904, 0
+LP001106;"Male;Beale;Hudd";0;Graduate;No;2275;2067;120;360;1;Urban;20-02-03;161580, 0, 154098
+LP001109;"Male;Patricio;Leroy";0;Graduate;No;1828;1330;100;360;0;Urban;16-01-91;108067, 0, 0
+LP001112;"Female;Lilah;Kinghorn";0;Graduate;No;3667;1459;144;360;1;Semiurban;09-09-06;133100, 0, 0
+LP001114;"Male;Luke;Siggery";0;Graduate;No;4166;7210;184;360;1;Urban;12-05-03;92465, 11106, 0
+LP001116;"Male;Anabelle;DeMichetti";0;Not Graduate;No;3748;1668;110;360;1;Semiurban;25-04-90;306974, 19304, 0
+LP001119;"Male;Akim;Illyes";0;Graduate;No;3600;0;80;360;1;Urban;28-10-91;298489, 12160, 0
+LP001120;"Male;Doreen;Fretwell";0;Graduate;No;1800;1213;47;360;1;Urban;13-02-00;462568, 0, 0
+LP001123;"Male;Marja;Rivalland";0;Graduate;No;2400;0;75;360;0;Urban;01-04-99;358432, 0, 0
+LP001131;"Male;Yuri;Dutteridge";0;Graduate;No;3941;2336;134;360;1;Semiurban;18-07-96;458613, 0, 0
+LP001136;"Male;Gillian;Checcucci";0;Not Graduate;Yes;4695;0;96;360;1;Urban;16-02-08;499374, 4940, 0
+LP001137;"Female;Peggi;Grunwald";0;Graduate;No;3410;0;88;120;1;Urban;22-05-06;352732, 7855, 0
+LP001138;"Male;Nanci;Wilsdon";1;Graduate;No;5649;0;44;360;1;Urban;27-02-08;370174, 3128, 0
+LP001144;"Male;Arch;Bedburrow";0;Graduate;No;5821;0;144;360;1;Urban;24-09-08;307414, 6620, 0
+LP001146;"Female;Candice;Ivanikov";0;Graduate;No;2645;3440;120;360;0;Urban;24-10-06;428011, 15044, 0
+LP001151;"Female;Gordon;Mease";0;Graduate;No;4000;2275;144;360;1;Semiurban;18-11-02;186196, 19978, 0
+LP001155;"Female;Gusti;Ebi";0;Not Graduate;No;1928;1644;100;360;1;Semiurban;12-10-02;384673, 3464, 0
+LP001157;"Female;Clo;Lightoller";0;Graduate;No;3086;0;120;360;1;Semiurban;10-11-96;223896, 13491, 0
+LP001164;"Female;Robina;Carmody";0;Graduate;No;4230;0;112;360;1;Semiurban;30-08-91;101061, 10736, 0
+LP001179;"Male;Risa;Dyhouse";2;Graduate;No;4616;0;134;360;1;Urban;18-01-06;235504, 5525, 0
+LP001186;"Female;Tabbie;Pritty";1;Graduate;Yes;11500;0;286;360;0;Urban;09-01-01;427338, 14572, 0
+LP001194;"Male;Harcourt;Dacres";2;Graduate;No;2708;1167;97;360;1;Semiurban;28-02-98;163138, 5058, 0
+LP001195;"Male;Arman;Jellicorse";0;Graduate;No;2132;1591;96;360;1;Semiurban;05-08-97;265065, 1143, 0
+LP001197;"Male;Isobel;Yesipov";0;Graduate;No;3366;2200;135;360;1;Rural;15-11-92;483530, 9285, 0
+LP001198;"Male;Klemens;Ballingal";1;Graduate;No;8080;2250;180;360;1;Urban;07-10-07;186033, 14070, 0
+LP001199;"Male;Reuben;Jolliman";2;Not Graduate;No;3357;2859;144;360;1;Urban;17-11-08;101600, 2255, 0
+LP001205;"Male;Tadeas;Ghione";0;Graduate;No;2500;3796;120;360;1;Urban;16-02-90;119105, 9124, 0
+LP001206;"Male;Jenifer;Rawlyns";3;Graduate;No;3029;0;99;360;1;Urban;23-06-02;268073, 3592, 0
+LP001207;"Male;Burr;Mocher";0;Not Graduate;Yes;2609;3449;165;180;0;Rural;17-10-01;284217, 15520, 0
+LP001213;"Male;Trix;Simonett";1;Graduate;No;4945;0;120;360;0;Rural;06-09-05;112832, 0, 0
+LP001222;"Female;Dale;Samuel";0;Graduate;No;4166;0;116;360;0;Semiurban;22-09-92;340518, 13304, 0
+LP001225;"Male;Brittni;Curnick";0;Graduate;No;5726;4595;258;360;1;Semiurban;16-04-02;285894, 0, 0
+LP001228;"Male;Laurie;Argyle";0;Not Graduate;No;3200;2254;126;180;0;Urban;13-04-97;248094, 13257, 0
+LP001233;"Male;Prue;Houlaghan";1;Graduate;No;10750;0;312;360;1;Urban;06-03-99;438323, 10688, 0
+LP001238;"Male;Fleur;Tille";3;Not Graduate;Yes;7100;0;125;60;1;Urban;24-06-03;171143, 12526, 0
+LP001241;"Female;Cindelyn;Coney";0;Graduate;No;4300;0;136;360;0;Semiurban;16-10-98;111927, 5283, 0
+LP001243;"Male;Abelard;McNeigh";0;Graduate;No;3208;3066;172;360;1;Urban;06-05-01;241860, 6685, 120079
+LP001245;"Male;Latrena;Crummay";2;Not Graduate;Yes;1875;1875;97;360;1;Semiurban;06-03-98;240403, 1146, 0
+LP001248;"Male;Delora;Scothorn";0;Graduate;No;3500;0;81;300;1;Semiurban;19-09-02;355380, 3950, 0
+LP001250;"Male;Billy;Muffin";3;Not Graduate;No;4755;0;95;120;0;Semiurban;04-04-08;403450, 5355, 0
+LP001253;"Male;Averil;Standeven";3;Graduate;Yes;5266;1774;187;360;1;Semiurban;10-03-08;305531, 1627, 0
+LP001255;"Male;Garfield;Dohrmann";0;Graduate;No;3750;0;113;480;1;Urban;02-06-91;167969, 0, 114613
+LP001256;"Male;Sammy;Bettinson";0;Graduate;No;3750;4750;176;360;1;Urban;05-03-98;128453, 14177, 0
+LP001259;"Male;Crissy;Blaxeland";1;Graduate;Yes;1000;3022;110;360;1;Urban;21-01-07;132941, 0, 0
+LP001263;"Male;Carl;DeLaSalle";3;Graduate;No;3167;4000;180;300;0;Semiurban;19-09-00;334933, 1204, 87723
+LP001264;"Male;Clint;Dyos";3;Not Graduate;Yes;3333;2166;130;360;1;Semiurban;18-05-95;444522, 0, 0
+LP001265;"Female;Perle;Novkovic";0;Graduate;No;3846;0;111;360;1;Semiurban;30-09-07;451884, 7492, 0
+LP001266;"Male;Betti;Farlam";1;Graduate;Yes;2395;0;120;360;1;Semiurban;22-09-99;238715, 14865, 191318
+LP001267;"Female;Isadora;Matula";2;Graduate;No;1378;1881;167;360;1;Urban;17-03-91;126229, 0, 0
+LP001273;"Male;Doyle;Gerard";0;Graduate;No;6000;2250;265;360;0;Semiurban;03-01-03;417245, 14603, 0
+LP001275;"Male;Daisy;Stigell";1;Graduate;No;3988;0;50;240;1;Urban;25-01-07;201821, 4730, 0
+LP001279;"Male;Christen;Scourge";0;Graduate;No;2366;2531;136;360;1;Semiurban;16-03-07;185571, 18873, 0
+LP001280;"Male;Martelle;Ruggieri";2;Not Graduate;No;3333;2000;99;360;1;Semiurban;28-10-02;90866, 2052, 0
+LP001282;"Male;Wilma;Hustler";0;Graduate;No;2500;2118;104;360;1;Semiurban;24-10-98;132088, 13230, 0
+LP001289;"Male;Barbie;Dillingston";0;Graduate;No;8566;0;210;360;1;Urban;11-07-94;312126, 0, 136401
+LP001310;"Male;Nolana;Irving";0;Graduate;No;5695;4167;175;360;1;Semiurban;19-02-97;495289, 10817, 0
+LP001316;"Male;Gabriel;Runham";0;Graduate;No;2958;2900;131;360;1;Semiurban;15-04-00;154998, 14773, 103961
+LP001318;"Male;Coraline;O'Noulane";2;Graduate;No;6250;5654;188;180;1;Semiurban;16-11-96;250089, 18915, 0
+LP001319;"Male;Cleavland;Writer";2;Not Graduate;No;3273;1820;81;360;1;Urban;21-12-91;164225, 18036, 0
+LP001322;"Male;Patsy;MacCourt";0;Graduate;No;4133;0;122;360;1;Semiurban;28-07-92;150746, 13198, 0
+LP001325;"Male;Clemmie;Lyttle";0;Not Graduate;No;3620;0;25;120;1;Semiurban;30-10-05;171376, 0, 0
+LP001326;"Male;Christopher;Cogley";0;Graduate;Yes;6782;0;120;360;0;Urban;05-08-03;200345, 12844, 0
+LP001327;"Female;Hagan;Gewer";0;Graduate;No;2484;2302;137;360;1;Semiurban;04-05-05;440206, 0, 160939
+LP001333;"Male;Roderick;Bruni";0;Graduate;No;1977;997;50;360;1;Semiurban;10-06-98;186878, 3619, 0
+LP001334;"Male;Ilene;Leyton";0;Not Graduate;No;4188;0;115;180;1;Semiurban;30-08-95;303083, 11760, 0
+LP001343;"Male;Olympie;Ley";0;Graduate;No;1759;3541;131;360;1;Semiurban;14-02-97;197635, 0, 0
+LP001043;"Male;Hunt;Isack";0;Not Graduate;No;7660;0;104;360;0;Urban;09-04-05;76752, 0, 0
+LP001046;"Male;Beltran;Cairney";1;Graduate;No;5955;5625;315;360;1;Urban;29-03-04;89305, 6826, 53133
+LP001047;"Male;Berty;Sillito";0;Not Graduate;No;2600;1911;116;360;0;Semiurban;30-05-05;447769, 1755, 0
+LP001050;"Female;Tate;Iliff";2;Not Graduate;No;3365;1917;112;360;0;Rural;15-10-02;91993, 0, 0
+LP001052;"Male;Luise;Attoe";1;Graduate;Yes;3717;2925;151;360;0;Semiurban;10-09-01;206291, 13305, 78416
+LP001066;"Male;Lyndell;Blennerhassett";0;Graduate;Yes;9560;0;191;360;1;Semiurban;14-05-92;170579, 11143, 0
+LP001068;"Male;Lani;Sterzaker";0;Graduate;No;2799;2253;122;360;1;Semiurban;01-06-92;384361, 0, 0
+LP001073;"Male;Alicea;Van";0;Not Graduate;No;4226;1040;110;360;1;Urban;19-08-92;373300, 0, 0
+LP001086;"Male;Isahella;Ragat";0;Not Graduate;No;1442;0;35;360;1;Urban;25-10-03;144040, 0, 0
+LP001087;"Female;Heidie;Delion";2;Graduate;Yes;3750;2083;120;360;1;Semiurban;28-09-91;276813, 7688, 0
+LP001024;"Male;Mortimer;Hanson";2;Graduate;No;3200;700;70;360;1;Urban;20-09-07;93114, 1233, 0
+LP001027;"Male;Selby;Calan";2;Graduate;Yes;2500;1840;109;360;1;Urban;28-02-90;451152, 2667, 174757
+LP001028;"Male;Mohandas;Raiker";2;Graduate;No;3073;8106;200;360;1;Urban;05-08-96;333056, 10132, 194450
+LP001029;"Male;Adamo;Indruch";0;Graduate;No;1853;2840;114;360;1;Rural;15-02-01;432180, 11441, 71592
+LP001030;"Male;Goddard;Reedshaw";2;Graduate;No;1299;1086;17;120;1;Rural;12-11-94;96326, 1812, 0
+LP001032;"Male;Merline;Carlson";0;Graduate;No;4950;0;125;360;1;Urban;11-05-93;82027, 8268, 0
+LP001034;"Male;Debby;Butlin";1;Not Graduate;No;3596;0;100;240;1;Urban;02-05-96;400126, 3439, 0
+LP001036;"Female;Esdras;Arp";0;Graduate;No;3510;0;76;360;0;Urban;15-05-07;389705, 12944, 0
+LP001038;"Male;Jerrie;Vanezis";0;Not Graduate;No;4887;0;133;360;1;Rural;15-02-96;271819, 3683, 0
+LP001041;"Male;Farah;Wayt";0;Graduate;Yes;2600;3500;115;120;1;Urban;17-05-90;132090, 13059, 0
+LP001003;"Male;Aubry;Stockman";1;Graduate;No;4583;1508;128;360;1;Rural;26-07-99;371586, 1618, 0
+LP001005;"Male;Rolf;Kohtler";0;Graduate;Yes;3000;0;66;360;1;Urban;23-04-98;175062, 3436, 0
+LP001006;"Male;Pepe;McSherry";0;Not Graduate;No;2583;2358;120;360;1;Urban;14-10-04;177935, 9218, 0
+LP001008;"Male;Aili;Dysart";0;Graduate;No;6000;0;141;360;1;Urban;17-03-96;126695, 0, 0
+LP001011;"Male;George;Atterley";2;Graduate;Yes;5417;4196;267;360;1;Urban;01-03-90;202838, 0, 86271
+LP001013;"Male;Afton;Dwire";0;Not Graduate;No;2333;1516;95;360;1;Urban;21-02-95;434914, 0, 155062
+LP001014;"Male;Randy;Laugier";3;Graduate;No;3036;2504;158;360;0;Semiurban;28-10-99;227213, 0, 0
+LP001018;"Male;Cly;Pfeffle";2;Graduate;No;4006;1526;168;360;1;Urban;26-02-94;437008, 0, 0
+LP001020;"Male;Terri-jo;Digan";1;Graduate;No;12841;10968;349;360;1;Semiurban;12-09-99;248542, 0, 0
+LP001345;"Male;Laney;Hollebon";2;Not Graduate;No;4288;3263;133;180;1;Urban;02-02-98;463047, 0, 0
+LP001349;"Male;Corine;Andre";0;Graduate;No;4843;3806;151;360;1;Semiurban;21-03-08;347261, 0, 0
+LP001350;"Male;Regan;Strowan";1;Graduate;No;13650;0;120;360;1;Urban;29-03-04;463405, 0, 189418
+LP001356;"Male;Goraud;Slad";0;Graduate;No;4652;3583;121;360;1;Semiurban;07-02-09;101892, 17005, 0
+LP001357;"Male;Emmerich;Wynrehame";0;Graduate;No;3816;754;160;360;1;Urban;16-12-00;155571, 8953, 0
+LP001367;"Male;August;Terrans";1;Graduate;No;3052;1030;100;360;1;Urban;09-07-96;151120, 0, 0
+LP001369;"Male;Rodolfo;Culley";2;Graduate;No;11417;1126;225;360;1;Urban;21-06-01;127036, 3900, 0
+LP001370;"Male;Byrom;Fairlam";0;Not Graduate;No;7333;0;120;360;1;Rural;01-01-01;444792, 19475, 0
+LP001379;"Male;Etti;Vasilyonok";2;Graduate;No;3800;3600;216;360;0;Urban;20-08-91;321195, 0, 0
+LP001384;"Male;Sheilakathryn;Beaushaw";3;Not Graduate;No;2071;754;94;480;1;Semiurban;30-09-05;282841, 9957, 0
+LP001385;"Male;Diarmid;Isard";0;Graduate;No;5316;0;136;360;1;Urban;11-03-97;272436, 5609, 0
+LP001387;"Female;Loraine;Kasperski";0;Graduate;Yes;2929;2333;139;360;1;Semiurban;27-04-93;146050, 6665, 0
+LP001391;"Male;Morey;Braidley";0;Not Graduate;No;3572;4114;152;120;0;Rural;06-07-99;477542, 19980, 0
+LP001392;"Female;Ly;Gaythwaite";1;Graduate;Yes;7451;0;121;360;1;Semiurban;27-04-91;487703, 17718, 173729
+LP001398;"Male;Hestia;Clemett";0;Graduate;No;5050;0;118;360;1;Semiurban;20-08-01;248280, 17679, 0
+LP001401;"Male;Reube;Fouracres";1;Graduate;No;14583;0;185;180;1;Rural;15-07-99;307866, 3667, 0
+LP001404;"Female;Jakob;Gabits";0;Graduate;No;3167;2283;154;360;1;Semiurban;13-05-04;186807, 19616, 0
+LP001405;"Male;Xylina;Bartens";1;Graduate;No;2214;1398;85;360;;Urban;26-10-99;450451, 17829, 114049
+LP001421;"Male;Izaak;Rewbottom";0;Graduate;No;5568;2142;175;360;1;Rural;01-10-97;358610, 0, 77179
+LP001422;"Female;Colette;Wallworke";0;Graduate;No;10408;0;259;360;1;Urban;02-05-94;388237, 18694, 140171
+LP001426;"Male;Jereme;Leat";1;Graduate;No;5667;2667;180;360;1;Rural;19-06-99;388216, 11119, 0
+LP001430;"Female;Sampson;Satchell";0;Graduate;No;4166;0;44;360;1;Semiurban;02-03-93;463937, 12569, 0
+LP001431;"Female;West;Obbard";0;Graduate;No;2137;8980;137;360;0;Semiurban;31-05-02;382548, 0, 0
+LP001432;"Male;Claudia;Cockarill";2;Graduate;No;2957;0;81;360;1;Semiurban;21-08-92;228511, 19369, 0
+LP001439;"Male;Lucretia;Haill";0;Not Graduate;No;4300;2014;194;360;1;Rural;20-12-08;464693, 0, 0
+LP001443;"Female;Bourke;Yuryatin";0;Graduate;No;3692;0;93;360;;Rural;19-05-01;237696, 8736, 0
+LP001448;"0;Selestina;Hobgen";3;Graduate;No;23803;0;370;360;1;Rural;29-07-95;480439, 13479, 128587
+LP001449;"Male;Bob;Sindell";0;Graduate;No;3865;1640;111;360;1;Rural;01-09-96;81748, 0, 117774
+LP001451;"Male;Gus;Downer";1;Graduate;Yes;10513;3850;160;180;0;Urban;25-03-96;214873, 13149, 0
+LP001465;"Male;Tami;Forder";0;Graduate;No;6080;2569;182;360;;Rural;06-09-05;188796, 19260, 0
+LP001469;"Male;Mufi;Letixier";0;Graduate;Yes;20166;0;650;480;;Urban;24-05-90;128020, 7805, 0
+LP001473;"Male;Connie;Larham";0;Graduate;No;2014;1929;74;360;1;Urban;01-03-91;463130, 4453, 0
+LP001478;"Male;Carole;Evenden";0;Graduate;No;2718;0;70;360;1;Semiurban;24-01-09;117568, 7444, 119761
+LP001482;"Male;Brewer;Pyke";0;Graduate;Yes;3459;0;25;120;1;Semiurban;27-08-93;334793, 5010, 0
+LP001487;"Male;Dagny;Burcher";0;Graduate;No;4895;0;102;360;1;Semiurban;10-08-03;473563, 14292, 0
+LP001488;"Male;Carr;Cartwright";3;Graduate;No;4000;7750;290;360;1;Semiurban;17-09-90;355322, 7951, 0
+LP001489;"Female;Halette;Mickleborough";0;Graduate;No;4583;0;84;360;1;Rural;09-02-93;435018, 0, 0
+LP001491;"Male;Clint;Arney";2;Graduate;Yes;3316;3500;88;360;1;Urban;17-01-03;395401, 9898, 0
+LP001492;"Male;Hermina;Limrick";0;Graduate;No;14999;0;242;360;0;Semiurban;24-05-92;337461, 9095, 0
+LP001493;"Male;Thadeus;Hunnywell";2;Not Graduate;No;4200;1430;129;360;1;Rural;11-12-01;361011, 8687, 153284
+LP001497;"Male;Xymenes;Boath";2;Graduate;No;5042;2083;185;360;1;Rural;22-11-98;153446, 18438, 0
+LP001498;"Male;Byran;Pexton";0;Graduate;No;5417;0;168;360;1;Urban;02-02-93;226602, 12944, 0
+LP001504;"Male;Doro;Barlow";0;Graduate;Yes;6950;0;175;180;1;Semiurban;07-01-94;480577, 0, 0
+LP001507;"Male;Jarib;DeCoursey";0;Graduate;No;2698;2034;122;360;1;Semiurban;02-04-96;299120, 13075, 0
+LP001508;"Male;Romain;Ruler";2;Graduate;No;11757;0;187;180;1;Urban;27-02-96;96167, 3421, 0
+LP001514;"Female;Inna;Lempke";0;Graduate;No;2330;4486;100;360;1;Semiurban;18-01-90;314290, 0, 0
+LP001516;"Female;Shaina;Allgood";2;Graduate;No;14866;0;70;360;1;Urban;10-02-94;372832, 17282, 59575
+LP001518;"Male;Odette;Balcon";1;Graduate;No;1538;1425;30;360;1;Urban;01-03-00;351813, 12446, 0
+LP001519;"Female;Glad;Mottinelli";0;Graduate;No;10000;1666;225;360;1;Rural;11-07-98;473139, 18326, 122182
+LP001520;"Male;Lorrin;Yven";0;Graduate;No;4860;830;125;360;1;Semiurban;23-12-03;102867, 0, 164657
+LP001528;"Male;Tabor;Redford";0;Graduate;No;6277;0;118;360;0;Rural;23-06-94;296614, 4660, 0
+LP001529;"Male;Ambrosio;Jedraszczyk";0;Graduate;Yes;2577;3750;152;360;1;Rural;22-09-07;150280, 14630, 0
+LP001531;"Male;Berton;Flageul";0;Graduate;No;9166;0;244;360;1;Urban;16-09-94;83976, 3684, 92395
+LP001532;"Male;Abbott;Charman";2;Not Graduate;No;2281;0;113;360;1;Rural;15-07-92;326980, 7020, 0
+LP001535;"Male;Sharai;Osmant";0;Graduate;No;3254;0;50;360;1;Urban;01-07-98;254261, 9850, 0
+LP001536;"Male;Brandise;Simecek";3;Graduate;No;39999;0;600;180;0;Semiurban;05-10-08;360784, 0, 0
+LP001541;"Male;Trev;Thurston";1;Graduate;No;6000;0;160;360;;Rural;06-12-97;396059, 0, 0
+LP001543;"Male;Salvatore;Demelt";1;Graduate;No;9538;0;187;360;1;Urban;19-07-90;457151, 9745, 0
+LP001546;"Male;Olivie;Vinten";0;Graduate;Yes;2980;2083;120;360;1;Rural;02-03-00;288759, 0, 0
+LP001552;"Male;Hildegarde;Gallop";0;Graduate;No;4583;5625;255;360;1;Semiurban;29-09-95;233444, 6577, 0
+LP001560;"Male;Kiley;Bere";0;Not Graduate;No;1863;1041;98;360;1;Semiurban;22-02-01;383310, 4620, 0
+LP001562;"Male;Cristy;Bruckmann";0;Graduate;No;7933;0;275;360;1;Urban;22-09-98;211574, 10986, 0
+LP001565;"Male;Myron;Cutteridge";1;Graduate;No;3089;1280;121;360;0;Semiurban;18-07-05;174735, 12208, 0
+LP001570;"Male;Hadrian;Cormack";2;Graduate;No;4167;1447;158;360;1;Rural;06-10-90;204736, 10763, 128066
+LP001572;"Male;Kerwin;Rabley";0;Graduate;No;9323;0;75;180;1;Urban;16-04-93;409663, 19820, 0
+LP001574;"Male;Nobe;Draaisma";0;Graduate;No;3707;3166;182;120;1;Rural;13-04-90;318959, 7543, 0
+LP001577;"Female;Darren;Hewins";0;Graduate;No;4583;0;112;360;1;Rural;11-11-92;484183, 12234, 0
+LP001578;"Male;Claudelle;Ebdon";0;Graduate;No;2439;3333;129;360;1;Rural;13-02-01;281405, 18300, 99849
+LP001579;"Male;Constancy;Lupson";0;Graduate;No;2237;0;63;480;0;Semiurban;04-08-94;479191, 4430, 0
+LP001580;"Male;Corene;Pedder";2;Graduate;No;8000;0;200;360;1;Semiurban;31-10-99;195729, 0, 0
+LP001581;"Male;Siusan;Sonnenschein";0;Not Graduate;No;1820;1769;95;360;1;Rural;09-07-90;286322, 13990, 0
+LP001585;"0;James;Dine-Hart";3;Graduate;No;51763;0;700;300;1;Urban;20-01-04;451246, 5022, 177584
+LP001586;"Male;Siegfried;Ference";3;Not Graduate;No;3522;0;81;180;1;Rural;01-07-97;442268, 1937, 0
+LP001594;"Male;Cheslie;Vinck";0;Graduate;No;5708;5625;187;360;1;Semiurban;15-03-06;182242, 12571, 0
+LP001603;"Male;Price;Benedyktowicz";0;Not Graduate;Yes;4344;736;87;360;1;Semiurban;06-06-03;270798, 4068, 0
+LP001606;"Male;Roseanna;Caurah";0;Graduate;No;3497;1964;116;360;1;Rural;28-03-98;216378, 8511, 0
+LP001608;"Male;Danell;Cleynman";2;Graduate;No;2045;1619;101;360;1;Rural;09-09-92;402405, 7954, 0
+LP001610;"Male;Sallyanne;Wolfenden";3;Graduate;No;5516;11300;495;360;0;Semiurban;12-08-92;225800, 18363, 0
+LP001616;"Male;Daria;Berendsen";1;Graduate;No;3750;0;116;360;1;Semiurban;21-01-99;365989, 6675, 0
+LP001630;"Male;Elka;Glowacha";0;Not Graduate;No;2333;1451;102;480;0;Urban;04-02-92;218619, 2065, 0
+LP001633;"Male;Rodi;Wehner";1;Graduate;No;6400;7250;180;360;0;Urban;15-11-99;206155, 1248, 0
+LP001634;"Male;Thurstan;Drayton";0;Graduate;No;1916;5063;67;360;;Rural;29-09-94;438725, 0, 0
+LP001636;"Male;Jock;Mingasson";0;Graduate;No;4600;0;73;180;1;Semiurban;20-03-06;212635, 15195, 180700
+LP001637;"Male;Ki;Briscam";1;Graduate;No;33846;0;260;360;1;Semiurban;27-05-97;88116, 16842, 0
+LP001639;"Female;Elise;McKeurton";0;Graduate;No;3625;0;108;360;1;Semiurban;13-07-02;152629, 4699, 0
+LP001640;"Male;Jake;Sheward";0;Graduate;Yes;39147;4750;120;360;1;Semiurban;07-05-95;444073, 11786, 0
+LP001641;"Male;Jermayne;Tresvina";1;Graduate;Yes;2178;0;66;300;0;Rural;11-07-93;115478, 10758, 0
+LP001643;"Male;Kristin;Felten";0;Graduate;No;2383;2138;58;360;;Rural;14-08-99;474680, 8714, 0
+LP001644;"0;Nicolette;Andriss";0;Graduate;Yes;674;5296;168;360;1;Rural;12-01-05;483360, 9473, 0
+LP001647;"Male;Clemence;Videneev";0;Graduate;No;9328;0;188;180;1;Rural;04-04-93;328370, 0, 0
+LP001653;"Male;Catherin;Ivanenko";0;Not Graduate;No;4885;0;48;360;1;Rural;18-11-01;150848, 11743, 127614
+LP001656;"Male;Lynnet;Banishevitz";0;Graduate;No;12000;0;164;360;1;Semiurban;07-03-92;308999, 8761, 0
+LP001657;"Male;Mil;Cargen";0;Not Graduate;No;6033;0;160;360;1;Urban;04-10-07;456212, 16091, 0
+LP001658;"Male;Levi;Sainteau";0;Graduate;No;3858;0;76;360;1;Semiurban;15-12-97;175908, 17118, 0
+LP001664;"Male;Brittne;McKee";0;Graduate;No;4191;0;120;360;1;Rural;17-02-06;140942, 7422, 0
+LP001665;"Male;Pip;McClinton";1;Graduate;No;3125;2583;170;360;1;Semiurban;02-06-92;357655, 6921, 0
+LP001666;"Male;Abbott;Giovannini";0;Graduate;No;8333;3750;187;360;1;Rural;01-05-92;193960, 0, 0
+LP001669;"Female;Van;Maher";0;Not Graduate;No;1907;2365;120;120;1;Urban;25-05-00;443654, 1941, 0
+LP001671;"Female;Kattie;Eisig";0;Graduate;No;3416;2816;113;360;;Semiurban;31-12-07;445464, 2797, 0
+LP001673;"Male;Sonny;Fegan";0;Graduate;Yes;11000;0;83;360;1;Urban;29-08-04;493171, 19857, 0
